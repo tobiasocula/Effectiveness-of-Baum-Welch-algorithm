@@ -1,4 +1,4 @@
-### The Baum-Welch algorithm for the weather-system HMM
+## The Baum-Welch algorithm for the weather-system HMM
 
 Given a hidden Markov-chain (HMM), consisting of a set of states (which are hidden) and observations, the goal is to estimate the parameters of the system. Here, the parameter set consists of the transition matrix $A$, the emission matrix $B$ and the initial starting probabilities $\pi$. If $N$ is the amount of states, $M$ the amount of possible observations in each timestamp and $T$ the amount of timestamps of the system (discrete integers), then $A$ is a $N\times N$ matrix where $a_{i,j}=\mathbb{P}(S_{t+1}=j\ |\ S_t=i\text{ for all }t)$ (being the probability that the next state $S_{t+1}$ will be $j$ given the current state $i$), $B$ is a $N\times M$ matrix where $b_{i,k}=b_i(O_t)=\mathbb{P}(O_t=k\ |\ S_t=i\text{ for all }t)$ (being the probability that we observe $O_t$ to be k given that we are in state $i$) and $\pi$ is a vector of length $N$ where $\pi_i=\mathbb{P}(S_1=i)$ (being the probability that the HMM started in state $i$).
 
